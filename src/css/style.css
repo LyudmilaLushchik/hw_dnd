@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	background: #107aba;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+textarea, input {
+	font-family: inherit;
+}
+
+.task_container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	padding: 1.25rem;
+}
+
+.column {
+	padding: 1rem;
+	width: 30%;
+	background-color: #e9e9e9;
+	border-radius: 5px;
+}
+
+.column_title {
+	margin-bottom: 0.5rem;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.add_btn {
+	margin-top: 0.625rem;
+	padding: 0.3rem 0;
+	border: none;
+	background-color: inherit;
+	color: #6c6b6b;
+	cursor: pointer;
+}
+
+.add_btn:hover {
+	text-decoration: underline;
+}
+
+.input_container {
+	margin-top: 0.8rem;
+}
+
+.input_task {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	width: 100%;
+	min-height: 1.25rem;
+	padding: 0.5rem;
+	background-color: azure;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	resize: none;
+}
+
+.input_add_btn {
+	padding: 0.5rem 0.8rem;
+	margin: 0.5rem 0.5rem 0 0;
+
+	border: none;
+	border-radius: 5px;
+	background-color: green;
+	font-weight: bold;
+	color: #fff;
+}
+
+.input_add_btn:hover {
+	background-color: darkgreen;
+	cursor: pointer;
+}
+
+.input_reset {
+	font-size: 16px;
+	background-color: inherit;
+	border: none;
+	cursor: pointer;
+}
+
+.task_list {
+	list-style-type: none;
+	min-height: 2rem;
+}
+
+.list_item {
+	display: flex;
+  justify-content: space-between;
+	margin-top: 0.5rem;
+	padding: 0.62rem 0.62rem;
+	cursor: grabbing;
+
+	border-radius: 0.32rem;
+	background-color: azure;
+	color: #000000;
+}
+
+.list_item:hover {
+	cursor: grabbing;
+}
+
+.task_item_del {
+	font-size: 14px;
+	cursor: pointer;
+	display: block;
+}
+
+.task_item_del:hover {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.none {
+	display: none;
+}
+
+.block {
+	display: block;
+}
+
+.list_item.dragging {
+	border-radius: 0.625rem;
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+	transform: rotate(2deg);
+	transition: transform 0.2s ease-in-out;
+}
